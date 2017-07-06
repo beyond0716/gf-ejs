@@ -1,0 +1,12 @@
+<% layout('web/layout/layout') -%>
+<form method="post">
+  <ul>
+    <% for(var i = 0; i < result.length; i++) { %>
+    <li>
+      <label>标题：<%= result[i].title %>，内容：<%= result[i].content %></label>
+      <input type="radio" name="topic" value=<%= result[i]._id%>>
+    </li>
+    <% } %>
+  </ul>
+  <button type="submit">确定</button>
+</form>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
+<header>
+	<div class="top-menu"><a href="/signup">Signup</a><a href="/login">Login</a><a href="/test">Test</a><a href="/block">Block</a><a href="/ueditor ">Ueditor</a><a href="/admin">Admin</a><a href="/curd">Curd</a></div>
+	<ul class="nav">
+		<li><a href="/">Home</a></li>
+		<li><a href="/user">User</a></li>
+		<li><a href="/topic/create">Topic</a></li>
+	</ul>
+	<dl>
+		<dt>Test</dt>
+		<dd><a href="/test/create">Create</a></dd>
+	</dl>
+</header>
+<section>
+	<%- body -%>
+</section>
+<footer>这是母版文件脚部</footer>
+</body>
+</html>

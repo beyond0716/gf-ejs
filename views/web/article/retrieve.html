@@ -1,0 +1,10 @@
+<% layout('web/layout/layout') -%>
+<form method="post">
+  <label><input type="radio" checked name="retrieve_type" value="0">按标题查找</label>
+  <label><input type="radio" name="retrieve_type" value="1">按内容查找</label>
+  <input type="text" name="keyword"><button type="submit">查找</button>
+</form>
+<% if(result) { %>
+<h2>查询结果：</h2>
+标题：<%= result[0].title %>，内容：<%= result[0].content %>
+<% } %>

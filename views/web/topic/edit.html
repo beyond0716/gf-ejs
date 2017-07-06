@@ -1,0 +1,32 @@
+<% layout('web/layout/layout') -%>
+<form action="/topic/create" method="post" enctype="multipart/form-data">
+  <div>
+    <select name="tab">
+      <option value="">请选择</option>
+      <option value="share">分享</option>
+      <option value="ask">问答</option>
+      <option value="job">招聘</option>
+    </select>
+  </div>
+  <div><label>标题：<input type="text" name="title" placeholder="这是标题" value=""></label></div>
+  <div class="">
+    <label><input type="radio" value="0" name="top" checked>不置顶</label>
+    <label><input type="radio" value="1" name="top">置顶</label>
+  </div>
+  <div>
+    <label><input type="checkbox" value="Vue" name="tag">Vue</label>
+    <label><input type="checkbox" value="NodeJS" name="tag">NodeJS</label>
+    <label><input type="checkbox" value="MongoDB" name="tag">MongoDB</label>
+  </div>
+  <div><input type="file" value="" name="cover"></div>
+  <div>
+  <script id="editor" type="text/plain" style="width:400px;height:200px;" name="content"></script>
+  </div>
+  <input type="submit" value="创建">
+</form>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+<script>
+  var ue = UE.getEditor('editor');
+</script>

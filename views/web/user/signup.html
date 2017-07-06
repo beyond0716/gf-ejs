@@ -1,0 +1,19 @@
+<% layout('web/layout/layout') -%>
+<% if(typeof(error)!=='undefined' && error){ %>
+<strong><%= error %></strong>
+<% } %>
+<form action="/signup" method="post">
+  <% if(typeof(name)!=='undefined'){ %>
+  <div><label>用户名：<input type="text" name="name" value="<%= name %>"></label></div>
+  <% }else{ %>
+  <div><label>用户名：<input type="text" name="name" value=""></label></div>
+  <% } %>
+  <div><label>密码：<input type="password" name="pass" value=""></label></div>
+  <div><label>确认密码：<input type="password" name="repass" value=""></label></div>
+  <% if(typeof(email)!=='undefined'){ %>
+  <div><label>电子邮箱：<input type="text" name="email" value="<%= email %>"></label></div>
+  <% }else{ %>
+  <div><label>电子邮箱：<input type="text" name="email" value=""></label></div>
+  <% } %>
+  <input type="submit" value="注册">
+</form>

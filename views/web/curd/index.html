@@ -1,0 +1,13 @@
+<% layout('web/layout/layout') -%>
+<ul>
+  <% for(var i = 0; i < result.length; i++) { %>
+  <li>标题：<%= result[i].title %>，内容：<%= result[i].content %></li>
+  <% } %>
+</ul>
+<dl>
+  <dt>CURD</dt>
+  <dd><a href="/curd/create">Create</a></dd>
+  <dd><a href="/curd/delete">Delete</a></dd>
+  <dd><a href="/curd/update">Update</a></dd>
+  <dd><a href="/curd/retrieve">Retrieve</a></dd>
+</dl>

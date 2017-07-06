@@ -1,0 +1,17 @@
+<% layout('web/layout/layout') -%>
+<p class="better-than-dead">I'm red if foo.css was loaded.</p>
+<p>Here are some muppets we know about:
+  <ul>
+    <%- partial('study/muppet',muppets) %>
+  </ul>
+</p>
+<%- partial('study/partial') %>
+<!--as字段值可以重命名模板中的变量-->
+<%- partial('study/partial-1',{ object: {name:'gf',age:'20',weight:'65kg'}, as: 'user' }) %>
+<ul>
+  <%- partial('study/partial-2',{ collection: [{title:'a'},{title:'b'},{title:'c'}], as: 'topic' }) %>
+</ul>
+<%- partial('study/partial-3',{ news: {title:'这是一条新闻',date:'2016-08-08'}}) %>
+<% include study/extra.html %>
+
+

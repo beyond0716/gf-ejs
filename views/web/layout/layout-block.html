@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I'm the layout-block</title>
+	<%- block('head').toString() %>
+</head>
+<body>
+<header><a href="/">Home</a> <a href="/block">Block</a> <a href="/test">Test</a> <a href="/admin">Admin</a></header>
+<section>
+	<%- body -%>
+	<%= block('../study/a').toString() %>
+</section>
+<footer>这是layout-block脚部</footer>
+<%= block('footer').toString() %>
+</body>
+</html>

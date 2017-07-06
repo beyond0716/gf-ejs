@@ -1,0 +1,5 @@
+<% layout('web/layout/layout-block') -%>
+<% block('head').append('<link type="text/css" href="/foo.css">') %>
+<h1>I am the template</h1>
+<% block('../study/a') %>
+<% block('footer').append('<script src="/bar.js"></script>') %>
